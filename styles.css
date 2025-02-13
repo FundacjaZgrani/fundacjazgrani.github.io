@@ -42,6 +42,7 @@ h1 {
     gap: 20px;
 }
 
+/* Basic styling for image boxes */
 .image-box {
     width: 250px;
     height: 250px;
@@ -49,13 +50,24 @@ h1 {
     border: 2px solid #555;
     background-size: cover;
     background-position: center;
+    transition: transform 0.3s ease;  /* Smooth transition for scaling */
 }
 
 /* Placeholder styles for the images */
 #image1 {
-    background-image: url('https://via.placeholder.com/250');
+    background-image: url('photos/plakat2.png');
 }
 
 #image2 {
-    background-image: url('https://via.placeholder.com/250');
+    background-image: url('photos/plakat3.png');
+}
+
+/* Hover effect: enlarge the image */
+.image-box:hover {
+    transform: scale(1.2);  /* Increase the size of the image */
+}
+
+/* Optional: To prevent images from being distorted */
+.image-box {
+    object-fit: cover;
 }
