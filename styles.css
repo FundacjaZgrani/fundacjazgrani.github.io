@@ -1,0 +1,61 @@
+/* Basic styles */
+body {
+    background-color: black;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Create the effect of little dots in the background */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/dots.png');
+    opacity: 0.1;
+    z-index: -1;
+}
+
+/* Styling for the main content */
+.container {
+    text-align: center;
+    color: white;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 30px;
+}
+
+/* Styling for image containers */
+.image-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.image-box {
+    width: 250px;
+    height: 250px;
+    background-color: #333;
+    border: 2px solid #555;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Placeholder styles for the images */
+#image1 {
+    background-image: url('https://via.placeholder.com/250');
+}
+
+#image2 {
+    background-image: url('https://via.placeholder.com/250');
+}
