@@ -45,7 +45,7 @@ h1 {
 /* Basic styling for image boxes */
 .image-box {
     width: 400px;
-    height: 750px;
+    height: 711px;  /* 9x16 ratio (400px * 16/9 = 711px) */
     background-color: #333;
     border: 2px solid #555;
     background-size: cover;
