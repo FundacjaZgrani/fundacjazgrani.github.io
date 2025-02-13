@@ -44,8 +44,8 @@ h1 {
 
 /* Basic styling for image boxes */
 .image-box {
-    width: 250px;
-    height: 250px;
+    width: 400px;
+    height: 750px;
     background-color: #333;
     border: 2px solid #555;
     background-size: cover;
