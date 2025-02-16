@@ -1,48 +1,94 @@
-/* Basic styles */
+/* Reset podstawowy */
 body {
-    background-color: black;
-    font-family: Arial, sans-serif;
+    background-color: white;
+    font-family: Helvetica, sans-serif;
     margin: 0;
     padding: 0;
     height: 100vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     overflow: hidden;
 }
 
-/* Create the effect of little dots in the background */
-body::before {
-    content: "";
-    position: absolute;
+/* Nagłówek */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    background-color: #f8f8f8;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('https://www.transparenttextures.com/patterns/dots.png');
-    opacity: 0.1;
-    z-index: -1;
+    right: 0;
+    z-index: 1000;
 }
 
-/* Styling for the main content */
-.container {
-    text-align: center;
-    color: white;
+.logo img {
+    max-width: 120px;
+    height: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 h1 {
-    font-size: 3em;
-    margin-bottom: 30px;
+    margin: 0;
+    text-align: center;
+    flex-grow: 1;
 }
 
-/* Styling for image containers */
+/* Menu nawigacyjne */
+nav {
+    position: relative;
+}
+
+.menu-toggle {
+    font-size: 1.5em;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background: white;
+    list-style: none;
+    padding: 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu.show {
+    display: block;
+}
+
+.menu li {
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.menu li:last-child {
+    border-bottom: none;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+/* Stylizacja zdjęć */
 .image-container {
     display: flex;
     justify-content: center;
     gap: 20px;
+    margin-top: 170px; /* Przesunięcie poniżej nagłówka */
 }
 
-/* Basic styling for image boxes */
 .image-box {
     width: 480px;
     height: 640px;
@@ -50,10 +96,9 @@ h1 {
     border: 2px solid #555;
     background-size: cover;
     background-position: center;
-    transition: transform 0.3s ease;  /* Smooth transition for scaling */
+    transition: transform 0.3s ease;
 }
 
-/* Placeholder styles for the images */
 #image1 {
     background-image: url('photos/plakat2_smol.png');
 }
@@ -62,12 +107,6 @@ h1 {
     background-image: url('photos/plakat3_smol.png');
 }
 
-/* Hover effect: enlarge the image */
 .image-box:hover {
-    transform: scale(1.2);  /* Increase the size of the image */
-}
-
-/* Optional: To prevent images from being distorted */
-.image-box {
-    object-fit: cover;
+    transform: scale(1.1);
 }
