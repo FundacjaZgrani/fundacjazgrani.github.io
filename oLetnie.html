@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obozy letnie</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">
+            <img src="photos/logoZgrani.png" alt="Logo Fundacji Zgrani">
+        </a>
+        <h1>Obozy letnie</h1>
+        <nav>
+            <button class="menu-toggle">☰</button>
+            <ul class="menu">
+                <li><a href="oLetnie.html">Obozy letnie</a></li>
+                <li><a href="oZimowe.html">Obozy zimowe</a></li>
+                <li><a href="gTerenowe.html">Gry terenowe</a></li>
+                <li><a href="#">O nas</a></li>
+                <li><a href="#">Galeria</a></li>
+                <li><a href="#">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="content">
+        <img src="photos/obozyLetnie.webp" alt="Obozy letnie">
+        <p>Obozy letnie dla dzieci to wyjątkowa okazja do aktywnego wypoczynku, nauki i zabawy w gronie rówieśników. Podczas obozów dzieci biorą udział w różnorodnych zajęciach, takich jak gry terenowe, sporty, warsztaty artystyczne czy zajęcia edukacyjne. Program często obejmuje także ogniska, wycieczki oraz integracyjne zabawy drużynowe, które rozwijają samodzielność, kreatywność i umiejętności społeczne.
+    </div>
+    <div class="oferta">
+        <a>Aktualna oferta:</a>
+    </div>
+    <div class="oferta">
+        <img src="photos/plakat2_smol.png" alt="plakat2" class="clickable-image" onclick="openFullscreen(this)">
+        <img src="photos/plakat3_smol.png" alt="plakat3" class="clickable-image" onclick="openFullscreen(this)">
+    </div>
+    <!-- Pełnoekranowy widok zdjęcia -->
+    <div id="fullscreen-overlay" class="overlay" onclick="closeFullscreen()">
+        <img id="fullscreen-image" src="">
+    </div>
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.menu').classList.toggle('show');
+        });
+    </script>
+</body>
+</html>
